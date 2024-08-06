@@ -1,0 +1,93 @@
+/**
+ * Created by dorien on 10/11/14.
+ */
+import java.lang.reflect.Array;
+import java.util.*;
+import java.io.*;
+
+public class TransitionMatrixChords {
+
+    HashMap<String, Integer> keyMap = new HashMap();
+    ArrayList<ArrayList<Double>> tmMatrix = new ArrayList<ArrayList<Double>>();
+
+
+    public TransitionMatrixChords(String fileName) throws FileNotFoundException {
+
+        //read this from file
+
+        //TODO finish this
+
+        keyMap.clear();
+        tmMatrix.clear();
+
+
+        File file = new File(fileName);
+
+        Scanner input = new Scanner(file);
+
+        //store the first line as headers in the keymap
+        String tmSize = input.nextLine();
+        String nextToken = input.nextLine();
+        String[] headers = nextToken.split("\\s");
+
+
+        for (Integer i = 0; i < headers.length; i++) {
+            keyMap.put(headers[i], i);
+        }
+
+        //System.out.print("size: "+ headers.length);
+        //System.out.print(keyMap);
+
+        Integer line = 0;
+        while (input.hasNextLine()) {
+
+            ArrayList<Double> tmRow =  new ArrayList<Double>();
+            tmRow.clear();
+
+            //or to process line by line
+            String nextLine = input.nextLine();
+            //System.out.print(nextLine);
+
+            //parse the line for spaces
+            String[] splitStr = nextLine.split("\\s+");
+
+
+           //store this matrix
+            for (String entry : splitStr) {
+                tmRow.add(Double.parseDouble(entry));
+            }
+
+           // System.out.println(nextLine);
+            line++;
+            tmMatrix.add(tmRow);
+        }
+
+        input.close();
+
+
+    }
+
+    Double getTransitionScore(MusicEvent firstEvent, MusicEvent secondEvent)  {
+
+        Double score;
+
+        String firstEventStr = getCompressed(firstEvent);
+        String secondEventStr = getCompressed(secondEvent);
+
+        Integer i = keyMap.get(firstEventStr);
+        Integer j = keyMap.get(secondEventStr);
+
+        score = tmMatrix.get(i).get(j);
+        //TODO test for right value
+
+        return score;
+    }
+
+    String getCompressed(MusicEvent musicEvent){
+
+        //TODO check for type chords versus notes
+        return ((Chord)musicEvent).getRootNote() + ":" + ((Chord)musicEvent)  ;
+
+
+    }
+}

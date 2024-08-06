@@ -1,0 +1,15 @@
+import java.util.Random;
+
+/**
+ * Created by dorien on 13/11/14.
+ */
+
+    public enum RootNote {
+        C, D, E, F, G, A, B, Cs, Cf, Ds, Df, Es, Ef, Fs, Ff, Gs, Gf, As, Af, Bs, Bf;
+
+        public static RootNote getRandom() {
+            Random random = new Random();
+            return values()[random.nextInt(values().length)];
+        }
+    }
+
