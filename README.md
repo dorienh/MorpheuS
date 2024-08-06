@@ -26,3 +26,4 @@ MusicXML files can be a bit inconsistent. If you encounter any issues it may be 
 ## References 
 If you find this repo useful, please cite our original paper: 
 [1] Herremans, D., & Chew, E. (2017). MorpheuS: generating structured music with constrained patterns and tension. IEEE Transactions on Affective Computing, 10(4), 510-523.
+Note, this repo uses David Meredith's [Omnisia](https://github.com/chromamorph/omnisia). 
