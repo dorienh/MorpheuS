@@ -28,5 +28,20 @@ The MorpheuS code was written quite a while ago and could due with many improvem
 
 ## References 
 If you find this repo useful, please cite our original paper: 
+
 [1] Herremans, D., & Chew, E. (2017). MorpheuS: generating structured music with constrained patterns and tension. IEEE Transactions on Affective Computing, 10(4), 510-523.
+
+```
+@article{herremans2017morpheus,
+  title={MorpheuS: generating structured music with constrained patterns and tension},
+  author={Herremans, Dorien and Chew, Elaine},
+  journal={IEEE Transactions on Affective Computing},
+  volume={10},
+  number={4},
+  pages={510--523},
+  year={2017},
+  publisher={IEEE}
+}
+```
+
 Note, this repo uses David Meredith's [Omnisia](https://github.com/chromamorph/omnisia). 
