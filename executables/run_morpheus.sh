@@ -11,9 +11,10 @@ echo
 
 read -p "Please enter the name (without extension) here: " filename
 read -p "Please enter the number of iterations: " iters
+read -p "Please enter the key base pitch (major), e.g. C: " key
 
 # Execute omnisia.jar
-java -jar omnisia.jar -i "$filename" -draw
+java -jar omnisia.jar -i "${filename}.mid" -draw
 
 # Get the name of the last created folder
 last_folder=$(ls -td */ | head -n 1)
@@ -22,6 +23,6 @@ last_folder=$(ls -td */ | head -n 1)
 mv "${last_folder}${filename}-chrom.cos" .
 
 # Run PMusicOR.jar
-java -jar PMusicOR.jar -inputfile "./$filename" -iters "$iters" -windowLength 8
+java -jar PMusicOR.jar -inputfile "./$filename" -iters "$iters" -windowLength 8 -key "$key"
 
 echo "Music generation completed."
