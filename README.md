@@ -21,11 +21,27 @@ Running MorpheuS will do two things: extract patterns with omnisia.jar and gener
 The initial random input as well as intermediate generated pieces and final output will be written to the folder as musicxml files. There will be additional files with [tension ribbons](https://dorienherremans.com/tension) overlayed, the latter can be viewed with [InScore viewer](https://inscore.grame.fr/). 
 
 
-## Known issues
+## Known issues and improvements
 MusicXML files can be a bit inconsistent. If you encounter any issues it may be due to an unexpected xml format. If your output is not satisfactory, you can try different settings for the pattern extraction, which may help. 
 
+The MorpheuS code was written quite a while ago and could due with many improvements. It is not parallelized, prints a bit too much output, and could be speed up. I haven't worked on this in a while but anyone if free to make commits. 
 
 ## References 
 If you find this repo useful, please cite our original paper: 
+
 [1] Herremans, D., & Chew, E. (2017). MorpheuS: generating structured music with constrained patterns and tension. IEEE Transactions on Affective Computing, 10(4), 510-523.
+
+```
+@article{herremans2017morpheus,
+  title={MorpheuS: generating structured music with constrained patterns and tension},
+  author={Herremans, Dorien and Chew, Elaine},
+  journal={IEEE Transactions on Affective Computing},
+  volume={10},
+  number={4},
+  pages={510--523},
+  year={2017},
+  publisher={IEEE}
+}
+```
+
 Note, this repo uses David Meredith's [Omnisia](https://github.com/chromamorph/omnisia). 
