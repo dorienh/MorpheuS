@@ -11,7 +11,7 @@ Requirements: you need a java runtime environment, as well as an uncompressed mu
 
 Download the `executables` folder and enter it `cd executables\`, locate the `run_morpheus.sh` script. 
 
-Ensure that it is executable: `chmod +x morpheus_music_generation.sh`. 
+Ensure that it is executable: `chmod +x run_morpheus.sh`. 
 
 Instructions will be provided when you run the script: 
 `./run_morpheus.`
