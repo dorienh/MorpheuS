@@ -24,7 +24,7 @@ The initial random input as well as intermediate generated pieces and final outp
 ## Known issues and improvements
 MusicXML files can be a bit inconsistent. If you encounter any issues it may be due to an unexpected xml format. If your output is not satisfactory, you can try different settings for the pattern extraction, which may help. 
 
-The MorpheuS code was written quite a while ago and could due with many improvements. It is not parallelized, prints a bit too much output, and could be speed up. I haven't worked on this in a while but anyone if free to make commits. 
+The MorpheuS code was written quite a while ago and could due with many improvements. It is not parallelized, prints a bit too much output, and could be speed up. I haven't worked on this in a while but anyone if free to make commits. Currently, the xml parser does take into account transposition of certain tracks/instruments e.g. saxophone. 
 
 ## References 
 If you find this repo useful, please cite our original paper: 
